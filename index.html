@@ -1,23 +1,176 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>About Tyler Bunnell</title>
-    </head>
-    <body>
-        <h1>Tyler Bunnell</h1>
-        <img src = "tbunz&jbunz.jpg">
-        <p>This is my fiance, Jordan, and I. She is so pretty!</p>
-        <h2>About Me</h2>
-        <p>I am 21 years old, from Renton Washington, and am currently a student at Central Washington University.
-            I am majoring in computer science and minoring in math. I currently work as a Lab TA for 
-            the CWU computer science department. I basically work as a tutor for the CS department.
-            I also play for the CWU club Soccer and club Ultimate Frisbee Teams. I am the president and coach
-            of the Ultimate team while also playing on it. Sorry to the ladies who are interested in this stud
-            because I am engaged to my best friend and cannot wait to marry her.
-        </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Divs</title>
+    <style>
+       /* TODO : insert your styles here to make the checkerboard look like
+       https://raw.githubusercontent.com/orlandpm/epischool-code/main/checkerboard.png */
+       .light {
+            background-color: rgb(243, 204, 105);
+       }
+
+       .dark {
+            background-color: rgb(121, 83, 33);
+       }
+
+       .square {
+            width: 100px;
+            height: 100px;
+            margin: -3px;
+            display: inline-block;
+            position: relative;
+       }
+
+       .piece {
+           width: 75px;
+           height: 75px;
+           margin: 7.5px;
+           position: relative;
+           border-radius: 75px;
+       }
+
+       .black {
+           background-color: rgb(12, 12, 12);
+           border: 5px solid black
+       }
+
+       .red {
+           background-color: rgb(196, 2, 2);
+           border: 5px solid rgb(117, 0, 0);
+       }
+
+       #board {
+           width: 780px;
+           height: 780px;
+           padding: 20px;
+           background-color: black;
+           position: absolute;
+       }
+    </style>
+</head>
+<body>
+    <h1>Checkers</h1>
+    <div id="board">
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
         
-        <p>Click <a href = "favVG.html">here</a> to see my favorite video games!</p>
-        <p>Click <a href = "hobbies.html">here</a> to see my hobbies!</p>
-        <p>Click <a href = "favMovies.html">here</a> to see my favorite movies!</p>
-    </body>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="black piece"></div>
+        </div>
+
+        <div class="dark square"></div>
+        <div class="light square"></div>
+        <div class="dark square"></div>
+        <div class="light square"></div>
+        <div class="dark square"></div>
+        <div class="light square"></div>
+        <div class="dark square"></div>
+        <div class="light square"></div>  
+
+        <div class="light square"></div>
+        <div class="dark square"></div>
+        <div class="light square"></div>
+        <div class="dark square"></div>
+        <div class="light square"></div>
+        <div class="dark square"></div>
+        <div class="light square"></div>
+        <div class="dark square"></div>
+
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>          
+        
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+        <div class="dark square">
+            <div class="red piece"></div>
+        </div>
+        <div class="light square"></div>
+    </div>
+
+</body>
 </html>
