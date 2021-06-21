@@ -1,176 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Test Divs</title>
+    <title>Side Menu</title>
     <style>
-       /* TODO : insert your styles here to make the checkerboard look like
-       https://raw.githubusercontent.com/orlandpm/epischool-code/main/checkerboard.png */
-       .light {
-            background-color: rgb(243, 204, 105);
-       }
 
-       .dark {
-            background-color: rgb(121, 83, 33);
-       }
+        body {
+            margin: 0;
+        }
 
-       .square {
-            width: 100px;
-            height: 100px;
-            margin: -3px;
-            display: inline-block;
+        .no-menu {
+            height: 100%;
+            width: 50px;
+            background-color: lightblue;
+            display: block;
+            position: absolute;
+        }
+
+        .menu {
+            display: none;
+            visibility: visible;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            background-color: lightblue;
+        }
+
+        .no-menu:hover .menu {
+            display: block;
+        }
+
+        .menu-item {
+            background-color: lightblue;
+            padding: 30px 10px 30px 10px;
+            text-align: center;
             position: relative;
-       }
+            cursor: pointer;
+        }
 
-       .piece {
-           width: 75px;
-           height: 75px;
-           margin: 7.5px;
-           position: relative;
-           border-radius: 75px;
-       }
+        .menu-item:hover {
+            background-color: lightcoral;
+        }
 
-       .black {
-           background-color: rgb(12, 12, 12);
-           border: 5px solid black
-       }
+        .dropdown {
+            background-color: lightblue;
+            position: absolute;
+            text-align: center;
+            left: 100%;
+            top: 0px;
+            display: none;
+        }
 
-       .red {
-           background-color: rgb(196, 2, 2);
-           border: 5px solid rgb(117, 0, 0);
-       }
+        .menu-item:hover .dropdown {
+            display: inline-block;
+        }
 
-       #board {
-           width: 780px;
-           height: 780px;
-           padding: 20px;
-           background-color: black;
-           position: absolute;
-       }
+        .dropdown-item {
+            padding: 30px 10px 30px 10px;
+            white-space: nowrap;
+        }
+
+        .dropdown-item:hover {
+            background-color: lightcoral;
+        }
     </style>
 </head>
 <body>
-    <h1>Checkers</h1>
-    <div id="board">
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="black piece"></div>
-        </div>
-
-        <div class="dark square"></div>
-        <div class="light square"></div>
-        <div class="dark square"></div>
-        <div class="light square"></div>
-        <div class="dark square"></div>
-        <div class="light square"></div>
-        <div class="dark square"></div>
-        <div class="light square"></div>  
-
-        <div class="light square"></div>
-        <div class="dark square"></div>
-        <div class="light square"></div>
-        <div class="dark square"></div>
-        <div class="light square"></div>
-        <div class="dark square"></div>
-        <div class="light square"></div>
-        <div class="dark square"></div>
-
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>          
-        
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
-        <div class="dark square">
-            <div class="red piece"></div>
-        </div>
-        <div class="light square"></div>
+    <div class="no-menu"></div>
+    <div class="menu">
+        <div class="menu-item">Menu Item 1</div>
+            <div class="dropdown">
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+            </div>
+        <div class="menu-item">Menu Item 2</div>
+            <div class ="dropdown">
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+            </div>
+        <div class="menu-item">Menu Item 3</div>
+            <div class ="dropdown">
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+                <div class="dropdown-item">Dropdown Item</div>
+            </div>
     </div>
-
 </body>
 </html>
