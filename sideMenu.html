@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Side Menu</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .no-menu {
+            height: 100%;
+            width: 50px;
+            background-color: lightblue;
+            display: block;
+            position: absolute;
+        }
+
+        .menu {
+            display: none;
+            visibility: visible;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            background-color: lightblue;
+        }
+
+        .no-menu:hover .menu {
+            display: block;
+        }
+
+        .menu-item {
+            background-color: lightblue;
+            padding: 30px 10px 30px 10px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background-color: lightcoral;
+        }
+
+        .dropdown {
+            background-color: lightblue;
+            position: absolute;
+            text-align: center;
+            left: 100%;
+            top: 0px;
+            display: none;
+        }
+
+        .menu-item:hover .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-item {
+            padding: 30px 10px 30px 10px;
+            white-space: nowrap;
+        }
+
+        .dropdown-item:hover {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="no-menu">
+        <div class="menu">
+            <div class="menu-item">Menu Item 1
+                <div class="dropdown">
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                </div>
+            </div>
+            <div class="menu-item">Menu Item 2
+                <div class ="dropdown">
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                </div>
+            </div>
+            <div class="menu-item">Menu Item 3
+                <div class ="dropdown">
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                    <div class="dropdown-item">Dropdown Item</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
